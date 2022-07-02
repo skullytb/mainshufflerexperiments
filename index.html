@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- restructure forms and html so this works -->
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Overman Main Truffle Shuffler X3</title>
+    <!-- jquery thing here, may need to put in index.html, not sure yet, in <head> so it loads before everything else inside website, using a CDN so it auto updates -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="app.css">
+    <!--include css-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.0/css/bulma.min.css">
+    <!--include Bulma ^^^-->
+</head>
+
+<body>
+    <h1 style="font-size: 75px; color:white;font-weight:bold; margin:25px;">OVERMAN MAIN TRUFFLE SHUFFLER X3</h1>
+
+
+
+    <section id="container" style="text-align:center">
+        <div style="display: inline-block;background-color: #f99e1a ;" class="WelcomeBanner">W</div>
+        <div style="display: inline-block;background-color: #43484c ;" class="WelcomeBanner">E</div>
+        <div style="display: inline-block; background-color: #405275 ;" class="WelcomeBanner">L</div>
+        <div style="display: inline-block; background-color: #218ffe;" class="WelcomeBanner">C</div>
+        <div style="display: inline-block; background-color: #000000 ;" class="WelcomeBanner">O</div>
+        <div style="display: inline-block;background-color: #f99e1a ;" class="WelcomeBanner">M</div>
+        <div style="display: inline-block;background-color: #43484c ;" class="WelcomeBanner">E</div>
+        <div style="display: inline-block; background-color: #405275 ;" class="WelcomeBanner">!</div>
+        <div style="display: inline-block; background-color: #218ffe;" class="WelcomeBanner">!</div>
+        <div style="display: inline-block; background-color: #000000 ;" class="WelcomeBanner">!</div>
+    </section>
+
+    <nav>
+
+
+        <b><h1 class="title has-text-centered;" style="color:white; font-weight:bold;margin: 25px;">Let's Do a Main Swap!</h1></b>
+        <p>
+
+            <!--Should have the # of players in party before the name's of the players, as the # names will be depending on # in party-->
+            <h2><b><text style="color:white; margin: 25px; font-size: 1.25em;"class="subheading";>How many players in the party? ( Please Choose 5 if Playing OW2 )</text></b></h2>
+            <!--start form-->
+            <form action="/Character Swap" id="charswap" class="has-text-light">
+                <!--when form is submitted, the data gets sent to this location, 
+                   URL is changed when submit is pressed, and we navigate away from form by default-->
+                <!--# in party, radio buttons-->
+
+                <!--START OVERARCHING RADIO BUTTON DIV-->
+                <div class="radioMaster column is-centered">
+
+                    <div class="has-text-light">
+                        <!-- start first button-->
+                        <!--changed to div-->
+
+                        <b><label for="two">2</label></b>
+                        <input type="radio" name="players" id="two" value="2" required>
+                        <!--remember name = same for all radio elements-->
+                    </div>
+
+                    <div class="has-text-light">
+                        <b><label for="three">3</label></b>
+                        <input type="radio" name="players" id="three" value="3" required>
+                    </div>
+
+                    <!-- not sure if values should be 3 or three, find out in a bit-->
+                    <div class="has-text-light">
+                        <b><label for="four">4</label></b>
+                        <input type="radio" name="players" id="three" value="4" required>
+                    </div>
+                    <div class="has-text-light">
+                        <b><label for="five">5</label></b>
+                        <input type="radio" name="players" id="five" value="5" required>
+
+                    </div>
+                    <div class="has-text-light">
+                        <b><label for="six">6</label></b>
+                        <input type="radio" name="players" id="six" value="6" required>
+                    </div>
+                </div>
+                <!--END RADIO MASTER DIV ^^^-->
+
+
+                <b><h1 class="title has-text-centered;" style="color:white; font-weight:bold;margin: 25px; font-size: 1.25em;">Enter Names and Mains after Selecting # of Players in Party ... </h1></b>
+                <!--Amount of names depends on # of players selected above; changed these to divs as well-->
+                <!-- there will always be at least two players in the party-->
+                <div id="inputContainer"></div>
+                <div id="swapBtn" class="buttons is-centered">
+                    <button class="mt-2 button is-rounded is-centered" style="background-color:#218ffe;">Shuffle Character Mains!</button>
+
+                </div>
+
+
+            </form>
+            <!--end form-->
+
+            <div id="resetBtn" class="buttons is-centered">
+                <button class="mt-2 button is-rounded" style="background-color:#f99e1a;">Reset Page + Form</button>
+                <!--find out how to center-->
+            </div>
+
+            <div id="resultsDiv"></div>
+            <footer class="FooterClass">
+
+                <p>Kathy Moss - @ 2022</p>
+                <p>Big thanks to husband Guilty, and friends Vamp and Greg!</p>
+            </footer>
+
+            <!--^^^ empty container here so it can be reset like form-->
+            <!-- <script src="order.js "></script> -->
+            <script src="app.js "></script>
+            <script src="SubmitForm.js "></script>
+            <!-- not sure what this does, says its optional but im putting in anyway, ctrl / to comment-->
+            <script src="inputs.js "></script>
+
+</body>
+
+</html>
