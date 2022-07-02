@@ -1,0 +1,134 @@
+    h1 {
+        font-family: 'BebasNeueRegular';
+        text-align: center;
+    }
+    
+    h2 {
+        font-family: 'BebasNeueRegular';
+        text-align: center;
+    }
+    /* .subheading {} */
+    
+    .container {
+        background: #f5d9df;
+        font-family: "Nunito", sans-serif;
+        font-weight: 100px;
+    }
+    
+    iframe[seamless] {
+        /*this takes away the ugly formatting over the PlayerHTMLTemplateKath*/
+        border: none;
+    }
+    
+    div.radioMaster {
+        /* radioMaster class div , transparency, 40	52	75 ... same as #darknlue;*/
+        /* display: flex; */
+        /* align-items: center; */
+        /* display: flex;
+        flex-wrap: wrap;
+        align-content: center; */
+        /* used this for multiple child */
+        background-color: rgba( 40, 52, 75, 0.3);
+        border-radius: 25px;
+        text-align: center;
+        font-size: 15px;
+        font-family: 'BebasNeueRegular';
+        /* auto margin puts div in center of screens, TOP LEFT BOTTOM RIGHT */
+        margin: 25px;
+    }
+    
+    div.numPlayersPg_Class {
+        font-family: 'BebasNeueRegular';
+        /* height: 250px; */
+        background-color: rgba( 40, 52, 75, 0.3);
+        border-radius: 25px;
+        text-align: center;
+        font-size: 15px;
+        /* auto margin puts div in center of screens, TOP LEFT BOTTOM RIGHT */
+        margin: 25px;
+        color: white;
+    }
+    
+    img.poop {
+        width: 100px;
+        height: 100px;
+        /* margin: 100px 15px 0px 15px; */
+        /*top right bottom left*/
+        /* line-height: 250px; */
+    }
+    
+    div.resultsTag_Class {
+        font-weight: bold;
+        color: white;
+        font-family: 'BebasNeueRegular';
+        text-align: center;
+        font-size: 2em;
+        margin: 25px;
+        /* font size should be the same as default h1 (the "lets do a main swap") so 2em */
+    }
+    
+    .resetBtn {
+        font-weight: bold;
+        text-align: center;
+        padding: 10px 20px;
+        margin: 25px;
+    }
+    
+    .swapBtn {
+        font-weight: bold;
+        text-align: center;
+        padding: 10px 20px;
+    }
+    
+    html,
+    body {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        /* for browsers that do not support grad ^^^^*/
+        background-image: linear-gradient(to bottom right, #2b3345, #f87b0e);
+        background-attachment: fixed;
+    }
+    
+    .WelcomeBanner {
+        height: 70px;
+        width: 70px;
+        color: white;
+        margin: 0px 15px 0px 15px;
+        font-weight: bolder;
+        text-align: center;
+        font-size: 25px;
+        font-family: 'BebasNeueRegular';
+        border-radius: 25px;
+        line-height: 70px;
+    }
+    
+    .selectDiv_Class {
+        color: white;
+        display: inline-block;
+        background-color: #43484c;
+        text-align: center;
+        border-radius: 25px;
+        margin: 2.5px;
+    }
+    
+    #inputContainer {
+        margin: 25px auto;
+        padding: 10px;
+        background-color: rgba( 40, 52, 75, 0.3);
+        border-radius: 25px;
+        text-align: center;
+        font-size: 15px;
+        font-family: 'BebasNeueRegular';
+        margin: 25px;
+    }
+    
+    .outputText {
+        color: white;
+        font-size: 1.25em;
+    }
+    
+    .FooterClass {
+        text-align: center;
+        margin: 80px;
+    }
