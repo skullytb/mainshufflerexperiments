@@ -176,7 +176,7 @@ function Results() {
     numPlayersPg.innerHTML = numPlayers; //** set  innerHTML of that div to  numPlayers .. (numPlayers = radio.value)*/
 
     newImg.classList.add('poop');
-    newImg.src = "https://github.com/RadiantCrow77/radiantcrow77.github.io/blob/main/overpoo.png";
+    newImg.src = "https://github.com/RadiantCrow77/radiantcrow77.github.io/blob/main/overpoo.png?raw=true";
 
 
 
