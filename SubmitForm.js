@@ -46,15 +46,33 @@ function radioBtnValue() {
 }
 
 // start resetBtn
-resetBtn.addEventListener("click", function(e) {
 
-    e.preventDefault;
-    console.log('clicked reset');
 
-    document.getElementById('charswap').reset();
-    resetOutputs();
+// trying to get resetbutton to work on the button ---- 
+let RESET = document.getElementById('RESET');
+if (RESET) { // checking if reset is null
+    RESET.addEventListener("click", function(e) {
 
-});
+        e.preventDefault;
+        console.log('clicked reset');
+
+        document.getElementById('charswap').reset();
+        resetOutputs();
+    });
+}
+
+
+// start resetBtn, this one works but its on the div ----
+// resetBtn.addEventListener("click", function(e) {
+
+//     e.preventDefault;
+//     console.log('clicked reset');
+
+//     document.getElementById('charswap').reset();
+//     resetOutputs();
+
+// });
+
 
 
 const form = document.querySelector('#charswap'); // select the form ID from HTML
@@ -131,6 +149,7 @@ function Shuffler() {
 
     for (x = 0; x < ShuffleArray.length; x++) {
 
+
         while (ShuffleArray.indexOf(tempRandom) !== -1) { // if tempRandom is in array, and the first # is not 0
             // do {
             tempRandom = RandomNumber(players.length); //roll dice with RandomNumber again
@@ -147,7 +166,19 @@ function Shuffler() {
 }
 
 function Swap() {
+    let tempChar;
+    let heroArrayVar = getHeroArray();
+
     for (x = 0; x < players.length; x++) {
+        if (players[x].Main == 'Randomize') {
+            tempChar = heroArrayVar[(RandomNumber(heroArrayVar.length - 1)) + 1]; // the +1 shortens the range and shifts it over
+            players[x].Main = tempChar; // calculates down to a single rand #, placing in shuffle arr
+            console.log(tempChar);
+        }
+    }
+
+    for (x = 0; x < players.length; x++) {
+
         players[x].SwappedMain = players[ShuffleArray[x]].Main; // grabbing the players box at x, Swapped Main of players box variable is accessed, set ShuffleArray at x = main
         players[x].SwappedWith = players[ShuffleArray[x]].Name;
     }
@@ -157,6 +188,7 @@ function Swap() {
 
 function Results() {
     let Results = document.getElementById('resultsDiv');
+
 
     // begin results to be changed
 
@@ -193,6 +225,8 @@ function Results() {
     let tempdiv = document.createElement("div");
     tempdiv.className = "outputText"
 
+
+
     if (players.length == 2) {
 
         if (players[0].Main == players[0].SwappedMain) {
@@ -205,7 +239,7 @@ function Results() {
         } else {
             // tempdiv.innerText = (players[0].Name + ' has swapped with ' + players[1].Name + '. They are now ' + players[1].Main + '!');
             // html works with template string
-            tempdiv.innerHTML = `<b>${players[0].Name}</b> has swapped with <b>${players[1].Name}</b>. They are now: <b>${players[1].Main}</b> !`;
+            tempdiv.innerHTML = `<b>${players[0].Name}</b> has swapped with <b>${players[1].Name}</b>. <b>${players[0].Name}</b> is now: <b>${players[1].Main}</b>! <b>${players[1].Name}</b> is now: <b>${players[0].Main}</b>!`;
             numPlayersPg.appendChild(tempdiv.cloneNode(true));
             numPlayersPg.appendChild(newline.cloneNode());
         }
@@ -222,7 +256,7 @@ function Results() {
             }
 
             // tempdiv.innerText = (players[x].Name + ' has swapped with ' + players[x].SwappedWith + '. They are now ' + players[x].SwappedMain + '!');
-            tempdiv.innerHTML = `<b>${players[x].Name}</b> has swapped with <b>${players[x].SwappedWith}</b>. They are now <b>${players[x].SwappedMain}</b>!'`;
+            tempdiv.innerHTML = `<b>${players[x].Name}</b> has swapped with <b>${players[x].SwappedWith}</b>. They are now <b>${players[x].SwappedMain}</b>!`;
             numPlayersPg.appendChild(tempdiv.cloneNode(true));
             numPlayersPg.appendChild(newline.cloneNode());
 
@@ -241,7 +275,7 @@ function Results() {
 }
 
 
-// 2- make a footer with my name and thanks to friends/hubby
+// 2a - fix buttons to be click evts, not divs
 // 2b- server side stuff, get it deployed
 // 2c - clean up and comment
 // 3- some react to look nicer if time permits
