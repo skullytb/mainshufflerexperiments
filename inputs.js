@@ -23,6 +23,10 @@ function createInputs(numberOfInputs) {
         mainSelect.name = ('Main');
         playerLabel.innerText = (`Player ${i}'s Name: `);
 
+        // playerText, which is the input element, is required for the names
+        playerText.setAttribute('required', '');
+
+
         playerText.type = ('text');
         playerText.id = (`player${i}`);
 
@@ -36,18 +40,25 @@ function createInputs(numberOfInputs) {
 
 
 
-        let heroArray = ["Ana", "Ashe", "Baptiste", "Bastion", "Brigette", "Cassidy", "D.va", "Doomfist", "Echo", "Genji", "Hanzo", "Junker Queen -- OW2 Only", "Junkrat", "Lucio", "Mei", "Mercy", "Moira", "Orisa", "Pharah", "Reaper", "Reinhardt", "Roadhog", "Sigma", "Sojourn -- OW2 Only", "Soldier: 76", "Sombra", "Symmetra", "Torbjorn", "Tracer", "Widowmaker", "Winston", "Wrecking Ball", "Zarya", "Zenyatta"];
+        heroArray = getHeroArray();
         heroArray.forEach(heroOptions);
 
         function heroOptions(hero) {
 
             let heroElement = document.createElement('option');
+
             heroElement.value = hero;
             heroElement.innerText = hero;
             mainSelect.appendChild(heroElement);
+
         }
         // document.btn.appendChild(selectDiv);
         document.getElementById('inputContainer').appendChild(selectDiv);
 
     }
+}
+
+function getHeroArray() {
+    let heroArray = ["Randomize", "Ana", "Ashe", "Baptiste", "Bastion", "Brigette", "Cassidy", "D.va", "Doomfist", "Echo", "Genji", "Hanzo", "Junker Queen -- OW2 Only", "Junkrat", "Lucio", "Mei", "Mercy", "Moira", "Orisa", "Pharah", "Reaper", "Reinhardt", "Roadhog", "Sigma", "Sojourn -- OW2 Only", "Soldier: 76", "Sombra", "Symmetra", "Torbjorn", "Tracer", "Widowmaker", "Winston", "Wrecking Ball", "Zarya", "Zenyatta"];
+    return heroArray;
 }
