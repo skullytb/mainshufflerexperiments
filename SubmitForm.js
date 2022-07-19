@@ -1,5 +1,4 @@
-// document.body.style.backgroundColor = "gray";
-
+// START radio button evt listener
 let radios = document.getElementsByName('players');
 let inputsExist = false;
 radios.forEach(function(element) {
@@ -20,19 +19,22 @@ radios.forEach(function(element) {
         }
     })
 });
+// END radio button evt listener
 
+//reset Inputs leaves inputcontainer empty
 function resetInputs() {
 
     document.getElementById('inputContainer').innerHTML = "";
 
 }
 
+//reset Outputs leaves resultsdiv empty
 function resetOutputs() {
     document.getElementById('resultsDiv').innerHTML = "";
 }
 
 
-
+// function returns the value of checked radio button
 function radioBtnValue() {
     let radios = document.getElementsByName('players');
     for (let radio of radios) {
@@ -40,12 +42,9 @@ function radioBtnValue() {
 
             return radio.value;
 
-
         }
     }
 }
-
-// start resetBtn
 
 
 // trying to get resetbutton to work on the button ---- 
@@ -62,19 +61,7 @@ if (RESET) { // checking if reset is null
 }
 
 
-// start resetBtn, this one works but its on the div ----
-// resetBtn.addEventListener("click", function(e) {
-
-//     e.preventDefault;
-//     console.log('clicked reset');
-
-//     document.getElementById('charswap').reset();
-//     resetOutputs();
-
-// });
-
-
-
+// START submit evt listener
 const form = document.querySelector('#charswap'); // select the form ID from HTML
 let numPlayers;
 form.addEventListener("submit", function(e) {
@@ -88,16 +75,14 @@ form.addEventListener("submit", function(e) {
     // Shuffler does thing here
     Shuffler();
 
+    // Swap character function called
     Swap();
 
+    // Show results on the DOM
     Results();
 
-
-
-
-
 });
-
+// END submit evt listener
 
 
 
@@ -151,11 +136,8 @@ function Shuffler() {
 
 
         while (ShuffleArray.indexOf(tempRandom) !== -1) { // if tempRandom is in array, and the first # is not 0
-            // do {
+
             tempRandom = RandomNumber(players.length); //roll dice with RandomNumber again
-
-
-            // } while (ShuffleArray.indexOf(tempRandom) !== -1) // if the # does exist in the array... do the loop again
 
         }
         ShuffleArray[x] = tempRandom; //place the random number in array
@@ -218,7 +200,7 @@ function Results() {
 
 
 
-    numPlayersPg.innerHTML = `<font size=5em>Congratulations! There are <b>${numPlayersPg.innerHTML}</b> players in your Shitterwatch team!!!</font>`; // Set numPlayerspginnerHTML to equal the entire string
+    numPlayersPg.innerHTML = `<font size=5em>Congratulations! There are <b>${numPlayersPg.innerHTML}</b> players in your Overpoo team!!!</font>`; // Set numPlayerspginnerHTML to equal the entire string
     numPlayersPg.appendChild(newline.cloneNode());
     numPlayersPg.appendChild(newline.cloneNode());
 
@@ -237,8 +219,7 @@ function Results() {
 
 
         } else {
-            // tempdiv.innerText = (players[0].Name + ' has swapped with ' + players[1].Name + '. They are now ' + players[1].Main + '!');
-            // html works with template string
+
             tempdiv.innerHTML = `<b>${players[0].Name}</b> has swapped with <b>${players[1].Name}</b>. <b>${players[0].Name}</b> is now: <b>${players[1].Main}</b>! <b>${players[1].Name}</b> is now: <b>${players[0].Main}</b>!`;
             numPlayersPg.appendChild(tempdiv.cloneNode(true));
             numPlayersPg.appendChild(newline.cloneNode());
@@ -248,14 +229,13 @@ function Results() {
         for (x = 0; x < players.length; x++) {
             if (players[x].Main == players[x].SwappedMain) {
 
-                // tempdiv.innerText = (players[x].Name + ' did not swap and remains as ' + players[x].Main + '. ');
+
                 tempdiv.innerHTML = `<b>${players[x].Name}</b> did not swap and remains as <b>${players[x].Main}</b>.`;
                 numPlayersPg.appendChild(tempdiv.cloneNode(true));
                 numPlayersPg.appendChild(newline.cloneNode());
                 continue; // continue stops iteration of loop
             }
 
-            // tempdiv.innerText = (players[x].Name + ' has swapped with ' + players[x].SwappedWith + '. They are now ' + players[x].SwappedMain + '!');
             tempdiv.innerHTML = `<b>${players[x].Name}</b> has swapped with <b>${players[x].SwappedWith}</b>. They are now <b>${players[x].SwappedMain}</b>!`;
             numPlayersPg.appendChild(tempdiv.cloneNode(true));
             numPlayersPg.appendChild(newline.cloneNode());
@@ -265,8 +245,7 @@ function Results() {
         }
 
     }
-    //tempdiv.innerText += (players[x].Name + ' -- main ' + players[x].Main + ', swapped with ' + players[x].SwappedWith + ' -- main ' +
-    //players[x].SwappedMain);
+
     // Append webpage
     numPlayersPg.appendChild(newImg); // put stuff inside of numPlayersPg first
 
@@ -274,10 +253,10 @@ function Results() {
     Results.appendChild(numPlayersPg); // append numPlayersPg to the page
 }
 
-
-// 2a - fix buttons to be click evts, not divs
-// 2b- server side stuff, get it deployed
-// 2c - clean up and comment
-// 3- some react to look nicer if time permits
-// 4- put ads, put on reddit
+// made scrollbar - 7/19
+// hoverable buttons
+// put vamp's IG and Twitter - 7/19
+// https://twitter.com/Gamervamp2
+// https://www.instagram.com/gamervamp12/
+// some react to look nicer
 // ongoing - make nicer as learning more
