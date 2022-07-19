@@ -69,17 +69,6 @@
         text-align: center;
         padding: 10px 20px;
     }
-    /* trying hovers, not working */
-    /* .resetBtn:hover {
-        background-color: rgb(17, 41, 64);
-        transition: 0.7s;
-    }
-    
-    div#swapBtn button.mt-2.button.is-rounded.is-centered.SUBMIT:hover {
-        background-color: rgb(17, 41, 64);
-        transition: 0.7s;
-    }
-     */
     
     html,
     body {
@@ -168,8 +157,19 @@
     .fa {
         filter: drop-shadow(3px 2px 2px rgb(0 0 0 / 0.4));
     }
-    /* #myLinks {
-        display: grid;
-        grid-auto-rows: 25px;
-       
-    } */
+    
+    #SUBMIT {
+        background-color: #218ffe;
+    }
+    
+    #SUBMIT:hover {
+        background-color: #70b3f5;
+    }
+    
+    #RESET {
+        background-color: #f99e1a;
+    }
+    
+    #RESET:hover {
+        background-color: #f6b95e;
+    }
