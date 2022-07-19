@@ -1,5 +1,5 @@
     h1 {
-        font-family: 'BebasNeueRegular';
+        font-family: 'Aldrich', sans-serif;
         text-align: center;
     }
     
@@ -21,13 +21,6 @@
     }
     
     div.radioMaster {
-        /* radioMaster class div , transparency, 40	52	75 ... same as #darknlue;*/
-        /* display: flex; */
-        /* align-items: center; */
-        /* display: flex;
-        flex-wrap: wrap;
-        align-content: center; */
-        /* used this for multiple child */
         background-color: rgba( 40, 52, 75, 0.3);
         border-radius: 25px;
         text-align: center;
@@ -52,9 +45,6 @@
     img.poop {
         width: 100px;
         height: 100px;
-        /* margin: 100px 15px 0px 15px; */
-        /*top right bottom left*/
-        /* line-height: 250px; */
     }
     
     div.resultsTag_Class {
@@ -79,6 +69,17 @@
         text-align: center;
         padding: 10px 20px;
     }
+    /* trying hovers, not working */
+    /* .resetBtn:hover {
+        background-color: rgb(17, 41, 64);
+        transition: 0.7s;
+    }
+    
+    div#swapBtn button.mt-2.button.is-rounded.is-centered.SUBMIT:hover {
+        background-color: rgb(17, 41, 64);
+        transition: 0.7s;
+    }
+     */
     
     html,
     body {
@@ -86,7 +87,7 @@
         flex-direction: column;
         height: 100%;
         /* for browsers that do not support grad ^^^^*/
-        background-image: linear-gradient(to bottom right, #2b3345, #f87b0e);
+        background-image: linear-gradient(to bottom, #2b3345, #eb9347);
         background-attachment: fixed;
     }
     
@@ -115,7 +116,7 @@
     #inputContainer {
         margin: 25px auto;
         padding: 10px;
-        background-color: rgba( 40, 52, 75, 0.3);
+        background-color: rgba(#405275 0.3);
         border-radius: 25px;
         text-align: center;
         font-size: 15px;
@@ -125,10 +126,50 @@
     
     .outputText {
         color: white;
-        font-size: 1.25em;
+        font-size: 1em;
     }
     
     .FooterClass {
         text-align: center;
         margin: 80px;
     }
+    /* scrollbar */
+    /* entire scrollbar width */
+    
+     ::-webkit-scrollbar {
+        width: 1em;
+        /* this bg color will be the same as the margin block in track vvv */
+        background: rgba(67, 72, 76, 1);
+    }
+    /* Track, entire scrollbar itself*/
+    
+     ::-webkit-scrollbar-track {
+        background: rgba(67, 72, 76, 1);
+        border-radius: 100vw;
+        /* ^^^ makes pill shape thumb look better at top of scroll */
+        margin-block: 0.5em;
+    }
+    /* Handle */
+    
+     ::-webkit-scrollbar-thumb {
+        /* in original color pack */
+        background: rgba(33, 143, 254, 0.3);
+        /* pill shape below */
+        border-radius: 100vw;
+        border: 2px solid rgb(67, 72, 76);
+    }
+    /* Handle on hover */
+    
+     ::-webkit-scrollbar-thumb:hover {
+        /* slightly darker than thumb */
+        background: rgba(31, 105, 180, 0.3);
+    }
+    
+    .fa {
+        filter: drop-shadow(3px 2px 2px rgb(0 0 0 / 0.4));
+    }
+    /* #myLinks {
+        display: grid;
+        grid-auto-rows: 25px;
+       
+    } */
