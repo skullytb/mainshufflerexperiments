@@ -13,6 +13,11 @@
     <!--include css-->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.0/css/bulma.min.css">
     <!--include Bulma ^^^-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!--incl social media icons^^^-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Aldrich&family=Bebas+Neue&family=Quicksand&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -35,17 +40,20 @@
 
     <nav>
 
-
+        <hr style=" border: 0.75px solid  rgba(67,72,76, 0.75)" class="FooterClass"></hr>
         <b><h1 class="title has-text-centered;" style="color:white; font-weight:bold;margin: 25px;">Let's Do a Main Swap!</h1></b>
+
         <p>
 
+
             <!--Should have the # of players in party before the name's of the players, as the # names will be depending on # in party-->
-            <h2><b><text style="color:white; margin: 25px; font-size: 1.25em;"class="subheading";>How many players in the party? ( Please Choose 5 if Playing OW2 )</text></b></h2>
+            <h2><b><text style=" color:white; margin: 25px; font-size: 1.25em;"class="subheading">How many players in the party? ( Please Choose 5 if Playing OW2 )</text></b></h2>
             <!--start form-->
             <form action="/Character Swap" id="charswap" class="has-text-light">
                 <!--when form is submitted, the data gets sent to this location, 
                    URL is changed when submit is pressed, and we navigate away from form by default-->
                 <!--# in party, radio buttons-->
+
 
                 <!--START OVERARCHING RADIO BUTTON DIV-->
                 <div class="radioMaster column is-centered">
@@ -81,13 +89,13 @@
                 </div>
                 <!--END RADIO MASTER DIV ^^^-->
 
-
-                <b><h1 class="title has-text-centered;" style="color:white; font-weight:bold;margin: 25px; font-size: 1.25em;">Enter Names and Mains after Selecting # of Players in Party ... </h1></b>
+                <b><h2 class="title has-text-centered subheading" style="color:white; font-weight:bold;margin: 25px; font-size: 1.25em;">Enter Names and Mains after Selecting # of Players in Party ... </h1></b>
                 <!--Amount of names depends on # of players selected above; changed these to divs as well-->
                 <!-- there will always be at least two players in the party-->
-                <div id="inputContainer"></div>
+                <div id="inputContainer"> </div>
                 <div id="swapBtn" class="buttons is-centered">
                     <button class="SUBMIT mt-2 button is-rounded is-centered" style="background-color:#218ffe;">Shuffle Character Mains!</button>
+                </div>
 
                 </div>
 
@@ -103,16 +111,29 @@
             <div id="resultsDiv"></div>
             <footer class="FooterClass">
 
-                <p>Kathy Moss - @ 2022</p>
-                <p>Big thanks to husband Guilty, and friends Vamp and Greg!</p>
+                <b><p>Kathy Moss - @ 2022</p></b>
+                <div id="myLinks">Linkedin Page:
+                    <a href="https://www.linkedin.com/in/katherine-bobo-moss/" class="fa fa-linkedin"></a>
+                </div>
+                <div>
+                    Email Me:
+                    <a href="mailto:kathmoss117@gmail.com" class="fa fa-google"> </a>
+                </div>
+
+                <hr style=" border: 0.75px solid rgba(67,72,76, 0.75)">
+                </hr>
+                <p>Big thanks to my husband Guilty, friends Vamp, Greg, and Skully for your continued support!</p>
+                <p>--</p>
+                <p>
+                    <p>Icon Graphic by the amazing artist <b>Vamp</b>, their links here:</p>
+                    <a href="https://twitter.com/Gamervamp2" class="fa fa-twitter"></a>
+                    <a href="https://www.instagram.com/gamervamp12/" class="fa fa-instagram"></a>
+
+                </p>
             </footer>
 
-            <!--^^^ empty container here so it can be reset like form-->
-            <!-- <script src="order.js "></script> -->
-
-            <script src="SubmitForm.js "></script>
-            <!-- not sure what this does, says its optional but im putting in anyway, ctrl / to comment-->
-            <script src="inputs.js "></script>
+            <script src="SubmitForm.js"></script>
+            <script src="inputs.js"></script>
 
 </body>
 
