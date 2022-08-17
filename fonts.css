@@ -3,7 +3,7 @@
 
 
 @font-face {
-    font-family: 'bignoodletooobliqueitalic';
+    font-family: 'BNT';
     src: url('../bignoodletoo-webfont.woff2') format('woff2'),
          url('../bignoodletoo-webfont.woff') format('woff');
     font-weight: normal;
@@ -15,7 +15,7 @@
 
 
 @font-face {
-    font-family: 'koverwatchregular';
+    font-family: 'KOVER';
     src: url('../koverwatch-webfont.woff2') format('woff2'),
          url('../koverwatch-webfont.woff') format('woff');
     font-weight: normal;
