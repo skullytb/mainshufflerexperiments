@@ -219,7 +219,7 @@ code,pre{
     -webkit-font-smoothing:auto;
     font-family:monospace
 }
-body{
+body,p,.skully{
     color:#4a4a4a;
     font-size:1em;
     font-weight:400;
