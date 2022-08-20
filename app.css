@@ -175,9 +175,6 @@
     }
     
     .skully:link {
-        color: #000000;
+        color: 'black';
     }
     
-    .skully {
-        font-family: 'BNT';
-    }
