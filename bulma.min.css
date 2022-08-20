@@ -219,13 +219,13 @@ code,pre{
     -webkit-font-smoothing:auto;
     font-family:monospace
 }
-body,p,.skully{
+body{
     color:#4a4a4a;
     font-size:1em;
     font-weight:400;
     line-height:1.5
 }
-a{
+a:not(.skully) {
     color:#485fc7;
     cursor:pointer;
     text-decoration:none
