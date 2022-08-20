@@ -173,3 +173,7 @@
     #RESET:hover {
         background-color: #f6b95e;
     }
+    
+    .skully:link {
+        color: #000000;
+    }
