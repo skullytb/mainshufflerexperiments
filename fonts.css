@@ -4,8 +4,8 @@
 
 @font-face {
     font-family: 'BNT';
-    src: url('../../radiantcrow77.github.io/bignoodletoo-webfont.woff2') format('woff2'),
-         url('../../radiantcrow77.github.io/bignoodletoo-webfont.woff') format('woff');
+    src: url('../../mainshufflerexperiments/bignoodletoo-webfont.woff2') format('woff2'),
+         url('../../mainshufflerexperiments/bignoodletoo-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 
@@ -16,8 +16,8 @@
 
 @font-face {
     font-family: 'KOVER';
-    src: url('../../radiantcrow77.github.io/koverwatch-webfont.woff2') format('woff2'),
-         url('../../radiantcrow77.github.io/koverwatch-webfont.woff') format('woff');
+    src: url('../../mainshufflerexperiments/koverwatch-webfont.woff2') format('woff2'),
+         url('../../mainshufflerexperiments/koverwatch-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 
