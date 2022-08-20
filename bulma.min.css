@@ -219,11 +219,14 @@ code,pre{
     -webkit-font-smoothing:auto;
     font-family:monospace
 }
-body{
+body,.skully{
     color:#4a4a4a;
     font-size:1em;
     font-weight:400;
     line-height:1.5
+}
+.skully{
+    cursor:default;
 }
 a{
     color:#485fc7;
