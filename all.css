@@ -28,6 +28,10 @@
   line-height: 1;
   text-rendering: auto; }
 
+.fab{
+  filter: drop-shadow(3px 2px 2px rgb(0 0 0 / 0.4));
+}
+
 .fa-1x {
   font-size: 1em; }
 
