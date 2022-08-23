@@ -48,36 +48,8 @@
 
 
                 <!--START OVERARCHING RADIO BUTTON DIV-->
-                <div class="radioMaster column is-centered">
-
-                    <div class="has-text-light">
-                        <!-- start first button-->
-                        <!--changed to div-->
-
-                        <b><label for="two">2</label></b>
-                        <input type="radio" name="players" id="two" value="2" required checked>
-                        <!--remember name = same for all radio elements-->
-                    </div>
-
-                    <div class="has-text-light">
-                        <b><label for="three">3</label></b>
-                        <input type="radio" name="players" id="three" value="3" required>
-                    </div>
-
-                    <!-- not sure if values should be 3 or three, find out in a bit-->
-                    <div class="has-text-light">
-                        <b><label for="four">4</label></b>
-                        <input type="radio" name="players" id="three" value="4" required>
-                    </div>
-                    <div class="has-text-light">
-                        <b><label for="five">5</label></b>
-                        <input type="radio" name="players" id="five" value="5" required>
-
-                    </div>
-                    <div class="has-text-light">
-                        <b><label for="six">6</label></b>
-                        <input type="radio" name="players" id="six" value="6" required>
-                    </div>
+                <div class="radioMaster column is-centered slideContainer">
+                    <input type="range" min="2" max="5" value="1" class="slider" id="myRange">
                 </div>
                 <!--END RADIO MASTER DIV ^^^-->
 
